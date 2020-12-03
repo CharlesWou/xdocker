@@ -3,16 +3,16 @@ cat <<-EOF > /etc/xfly/conf
 {
   "inbounds": [
   {
-    "port": 443,
-    "protocol": "${PROT}",
+    "port": ${PORT},
+    "protocol": "v${PROT_IN}",
     "settings": {
-      "${CLI}": [
+      "clients": [
         {
           "id": "${UUID}",
           "level": 0
         }
       ],
-      "${DEC}": "none"
+      "decryption": "none"
     },
     "streamSettings": {
       "network": "ws",
@@ -25,9 +25,10 @@ cat <<-EOF > /etc/xfly/conf
   ],
   "outbounds": [
   {
-    "protocol": "${FREE}"
+    "protocol": "f${PROT_OUT}"
   }
   ]
 }
 EOF
 /usr/bin/xfly/xfly -config=/etc/xfly/conf
+
