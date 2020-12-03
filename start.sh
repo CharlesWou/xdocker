@@ -18,7 +18,6 @@ cat <<-EOF > /etc/xfly/config
       "network": "ws",
       "security": "none",
       "wsSettings": {
-          "acceptProxyProtocol": true,
           "path": "${LOCATION}"
       }
     }
