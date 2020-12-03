@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && rm -rf /xfly.zip /usr/bin/xfly/*.sig /usr/bin/xfly/doc /usr/bin/xfly/*.json /usr/bin/xfly/*.dat /usr/bin/xfly/sys* \
  && chgrp -R 0 /etc/xfly \
  && chmod -R g+rwX /etc/xfly
-
+ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 ENTRYPOINT ./configure.sh
 EXPOSE 443
