@@ -19,3 +19,15 @@ cat <<-EOF > /etc/xfly/conf
       "security": "none",
       "wsSettings": {
           "path": "${PATH}"
+      }
+    }
+  }
+  ],
+  "${OUT}": [
+  {
+    "protocol": "${FREE}"
+  }
+  ]
+}
+EOF
+/usr/bin/xfly/xfly -config=/etc/xfly/conf
