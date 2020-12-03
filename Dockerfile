@@ -8,8 +8,8 @@ RUN export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
  && unzip /xfly.zip -d /usr/bin/xfly \
  && rm -rf /xfly.zip /usr/bin/xfly/*.sig /usr/bin/xfly/doc /usr/bin/xfly/*.json /usr/bin/xfly/*.dat /usr/bin/xfly/sys* \
  && chgrp -R 0 /etc/xfly \
- && chmod -R g+rwX /etc/xfly
+ && /bin/bash -c 'chmod -R g+rwX /etc/xfly'
 ADD start.sh /start.sh
-RUN chmod +x /start.sh
+RUN /bin/bash -c 'chmod +x /start.sh'
 ENTRYPOINT ./start.sh
 EXPOSE 443
