@@ -9,6 +9,6 @@ RUN export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin \
  && rm -rf /xfly.zip /usr/bin/xfly/*.sig /usr/bin/xfly/doc /usr/bin/xfly/*.json /usr/bin/xfly/*.dat /usr/bin/xfly/sys* \
  && chmod g+rwx /usr/bin/xfly
 ADD start.sh /start.sh
-RUN "/bin/chmod +x /start.sh"
+RUN chmod +x /start.sh
 ENTRYPOINT ./start.sh
 EXPOSE 443
