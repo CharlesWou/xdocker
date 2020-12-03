@@ -1,5 +1,5 @@
 #!/bin/sh
-cat <<-EOF > /usr/local/etc/xfly/config
+cat <<-EOF > /etc/xfly/config
 {
   "inbounds": [
   {
@@ -30,5 +30,5 @@ cat <<-EOF > /usr/local/etc/xfly/config
   ]
 }
 EOF
-/usr/local/bin/xfly/xray -config=/usr/local/etc/xfly/config
+/usr/bin/xfly/xray -config=/etc/xfly/config
 
