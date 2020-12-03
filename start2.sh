@@ -12,22 +12,4 @@ cat <<-EOF > /etc/xfly/conf
           "level": 0
         }
       ],
-      "${DEC}": "none"
-    },
-    "streamSettings": {
-      "network": "ws",
-      "security": "none",
-      "wsSettings": {
-          "path": "${PATH}"
-      }
-    }
-  }
-  ],
-  "${OUT}": [
-  {
-    "protocol": "freedom"
-  }
-  ]
-}
-EOF
-/usr/bin/xfly/xfly -config=/etc/xfly/conf
+
