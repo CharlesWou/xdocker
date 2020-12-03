@@ -18,7 +18,7 @@ cat <<-EOF > /etc/xfly/config
       "network": "ws",
       "security": "none",
       "wsSettings": {
-          "path": "${PATH}"
+          "path": "${LOCATION}"
       }
     }
   }
