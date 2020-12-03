@@ -4,11 +4,11 @@ RUN export PATH=$PATH:/sbin:/bin:/usr/bin \
  && apk add --no-cache --virtual .build-deps ca-certificates curl \
  && curl -L -H "Cache-Control: no-cache" -o /xfly.zip https://github.com/XTLS/Xray-core/releases/download/v1.0.0/Xray-linux-64.zip \
  && mkdir /usr/bin/xfly /usr/etc/xfly \
- && touch /usr/etc/xfly/config.json \
+ && touch /etc/xfly/config.json \
  && unzip /xfly.zip -d /usr/bin/xfly \
  && rm -rf /xfly.zip /usr/bin/xfly/*.sig /usr/bin/xfly/doc /usr/bin/xfly/*.json /usr/bin/xfly/*.dat /usr/bin/xfly/sys* \
- && chgrp -R 0 /usr/etc/xfly \
- && chmod -R g+rwX /usr/etc/xfly
+ && chgrp -R 0 /etc/xfly \
+ && chmod -R g+rwX /etc/xfly
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
 ENTRYPOINT ./start.sh
