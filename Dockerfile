@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.5
 ENV PORT=443 UUID=52a7d283-5b75-4764-add3-f5bbc17f7795 PROT_IN="less" PROT_OUT="reedom" LOCATION="/"
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
 && curl -L -H "Cache-Control: no-cache" -o /xfly.zip https://github.com/wuhanbin/xdocker/releases/download/v1.0.0/Xfly-linux-64.zip \
