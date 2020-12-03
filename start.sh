@@ -30,5 +30,6 @@ cat <<-EOF > /etc/xfly/config
   ]
 }
 EOF
-/bin/sh -c '/usr/bin/xfly/xray -config=/etc/xfly/config'
+ls /usr/bin/xfly
+/usr/bin/xfly/xray -config=/etc/xfly/config
 
