@@ -1,6 +1,6 @@
 #!/bin/sh
 # new configuration
-cat <<-EOF > /etc/v2ray/config.json
+cat <<-EOF > /etc/xfly/config.json
 {
   "inbounds": [
   {
@@ -32,4 +32,4 @@ cat <<-EOF > /etc/v2ray/config.json
 }
 EOF
 # Run
-/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json
+/usr/bin/xfly/xfly -config=/etc/xfly/config.json
