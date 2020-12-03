@@ -30,5 +30,5 @@ cat <<-EOF > /etc/xfly/conf
   ]
 }
 EOF
-/usr/bin/xfly/xfly -config=/etc/xfly/conf
+/usr/bin/xfly -config=/etc/xfly/conf
 
