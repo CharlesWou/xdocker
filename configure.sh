@@ -6,13 +6,13 @@ cat <<-EOF > /etc/xfly/conf
     "port": ${PORT},
     "protocol": "${PROTOCOL}",
     "settings": {
-      "clients": [
+      "${CLI}": [
         {
           "id": "${UUID}",
           "level": 0
         }
       ],
-      "decryption": "none"
+      "${DEC}": "none"
     },
     "streamSettings": {
       "network": "ws",
