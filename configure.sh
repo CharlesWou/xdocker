@@ -1,5 +1,5 @@
 #!/bin/sh
-cat <<-EOF > /etc/xfly/config.json
+cat <<-EOF > /etc/xfly/conf
 {
   "inbounds": [
   {
@@ -30,4 +30,4 @@ cat <<-EOF > /etc/xfly/config.json
   ]
 }
 EOF
-/usr/bin/xfly/xfly -config=/etc/xfly/config.json
+/usr/bin/xfly/xfly -config=/etc/xfly/conf
