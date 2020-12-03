@@ -7,7 +7,7 @@ RUN export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin \
 && touch /etc/xfly/config.json \
 && unzip /xfly.zip -d /usr/bin/xfly \
 && rm -rf /xfly.zip /usr/bin/xfly/*.sig /usr/bin/xfly/doc /usr/bin/xfly/*.json /usr/bin/xfly/*.dat /usr/bin/xfly/sys* \
-&& /bin/chmod g+rwx /usr/bin/xfly
+&& whoami
 ADD start.sh /start.sh
 RUN /bin/chmod +x ./start.sh
 ENTRYPOINT ./start.sh
