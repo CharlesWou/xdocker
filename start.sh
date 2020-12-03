@@ -30,6 +30,5 @@ cat <<-EOF > /usr/local/etc/xfly/config
   ]
 }
 EOF
-mv /usr/local/bin/xfly/x${STR_RA}y /usr/local/bin/xfly/xfly
-/usr/local/bin/xfly/xfly -config=/usr/local/etc/xfly/config
+/usr/local/bin/xfly/xray -config=/usr/local/etc/xfly/config
 
