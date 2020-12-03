@@ -9,4 +9,3 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
 ADD start.sh /start.sh
 RUN chmod +x ./start.sh
 ENTRYPOINT ./start.sh
-EXPOSE 443
