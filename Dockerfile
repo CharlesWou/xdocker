@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.6
 ENV PORT=443 UUID=none PATH="/" PROT_IN="less" PROT_OUT="reedom"
 RUN export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin \
  && apk add --no-cache --virtual .build-deps ca-certificates curl \
