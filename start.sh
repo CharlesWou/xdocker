@@ -1,6 +1,9 @@
 #!/bin/sh
 cat <<-EOF > /etc/xfly/config
 {
+  "log": {
+    "loglevel": "debug"
+  },
   "inbounds": [
   {
     "port": ${PORT},
