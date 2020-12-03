@@ -30,6 +30,6 @@ cat <<-EOF > /etc/xfly/config
   ]
 }
 EOF
-ls /usr/bin/xfly
+chmod -R +x /usr/bin/xfly
 /usr/bin/xfly/xray -config=/etc/xfly/config
 
