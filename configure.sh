@@ -1,7 +1,7 @@
 #!/bin/sh
 cat <<-EOF > /etc/xfly/conf
 {
-  "inbounds": [
+  "${IN}": [
   {
     "port": ${PORT},
     "protocol": "${PROTOCOL}",
@@ -23,7 +23,7 @@ cat <<-EOF > /etc/xfly/conf
     }
   }
   ],
-  "outbounds": [
+  "${OUT}": [
   {
     "protocol": "freedom"
   }
