@@ -1,10 +1,10 @@
 #!/bin/sh
 cat <<-EOF > /etc/xfly/conf
 {
-  "${IN}": [
+  "inbounds": [
   {
-    "${PRT}": ${PRT2},
-    "${PROT}": "${PROT2}",
+    "port": 443,
+    "protocol": "vless",
     "settings": {
       "${CLI}": [
         {
@@ -23,7 +23,7 @@ cat <<-EOF > /etc/xfly/conf
     }
   }
   ],
-  "${OUT}": [
+  "outbounds": [
   {
     "protocol": "${FREE}"
   }
