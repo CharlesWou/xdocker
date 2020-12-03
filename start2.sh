@@ -4,7 +4,7 @@ cat <<-EOF > /etc/xfly/conf
   "inbounds": [
   {
     "port": 443,
-    "protocol": "vless",
+    "protocol": "${PROT}",
     "settings": {
       "${CLI}": [
         {
