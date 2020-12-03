@@ -3,8 +3,8 @@ cat <<-EOF > /etc/xfly/conf
 {
   "${IN}": [
   {
-    "port": ${PORT},
-    "protocol": "${PROTOCOL}",
+    "${PRT}": ${PRT2},
+    "${PROT}": "${PROT2}",
     "settings": {
       "${CLI}": [
         {
