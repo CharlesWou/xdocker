@@ -18,7 +18,7 @@ cat <<-EOF > /etc/xfly/config
       "decryption": "none"
     },
     "streamSettings": {
-      "network": "ws",
+      "network": "h2",
       "security": "none",
       "wsSettings": {
           "path": "${LOCATION}"
