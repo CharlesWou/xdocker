@@ -19,7 +19,7 @@ cat <<-EOF > /etc/xfly/config
     },
     "streamSettings": {
       "network": "h2",
-      "security": "tls",
+      "security": "none",
       "wsSettings": {
           "path": "${LOCATION}"
       }
